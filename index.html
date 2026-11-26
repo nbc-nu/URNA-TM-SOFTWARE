@@ -59,6 +59,20 @@ h1 tw-link {
   padding: 0;
   margin: 0;
 }
+@media screen and (orientation: portrait) {
+  tw-story {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    width: 750px;
+    height: 550px;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    overflow: auto;
+  }
+}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="header-gui" color="blue"></tw-tag><tw-passagedata pid="1" name="Setup" tags="" position="400,175" size="100,100">&lt;div style=&quot;text-align: center;&quot;&gt;
   &lt;span onclick=&quot;document.documentElement.requestFullscreen();&quot; style=&quot;cursor: pointer;&quot;&gt;
     [[INICIAR-&gt;diskload]]
