@@ -8,7 +8,7 @@
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>Critical System error: Cannot run GUI interfaces without javascript enabled.</tw-noscript></noscript></tw-story>
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Urna Kindle.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Urna Kindle" startnode="1" creator="Twine" creator-version="2.12.1" format="Harlowe" format-version="3.3.9" ifid="926C8EBB-08AF-407D-B75D-2A771A687D88" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
   background-color: white;
   color: black;
@@ -103,7 +103,7 @@ Número: |visor&gt;[ **$digitado** ] — |candidato&gt;[
 &lt;center&gt;
 &lt;h1&gt;(link-rerun: &quot;FIM&quot;)[
   (set: $cliques to it + 1)
-  (if: $cliques is 5)[
+  (if: $cliques is 3)[
     (goto: &quot;results&quot;)
   ]
 ]&lt;/h1&gt;
@@ -124,6 +124,15 @@ Número: |visor&gt;[ **$digitado** ] — |candidato&gt;[
 
 (set: $total to $participante1 + $participante2 + $participante3 + $participante4 + $participante5)
 **Total de pessoas que votaram:** $total
+
+(link: &quot;RESETAR VOTAÇÃO&quot;)[
+  (set: $participante1 to 0)
+  (set: $participante2 to 0)
+  (set: $participante3 to 0)
+  (set: $participante4 to 0)
+  (set: $participante5 to 0)
+  (goto: &quot;Setup&quot;)
+]
 
 ---
 (c)2026 URNA TM / N.U. &amp; NBC corp.</tw-passagedata><tw-passagedata pid="7" name="diskload" tags="" position="475,325" size="100,100">(set: $participante1 to 0)
